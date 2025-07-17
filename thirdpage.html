@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>secpage</title>
+	
+	 <link rel="stylesheet" href="tp.css"> 
+	<!-- GSAP & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollTrigger.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+	<body class="block-center-center">
+    <nav id="mySidenav" class="sidenav">
+  <a href="mainpage2.html" id="about"><i class="fas fa-home"></i> </a>
+   <a href="fourthpage.html" id="blog"><i class="fas fa-feather"></i> </a>
+  <a href="5p.html"  id="projects"><i class="fas fa-id-card"></i> </a>
+  <a href="firstpage.html" id="contact"><i class="fas fa-hat-cowboy-side"></i> </a>
+	 <a href="secpage.html" id="fifth"><i class="fas fa-dove"></i> </a>	
+    </nav>
+    
+    <main >
+		 <div class="content">
+    <section class="section hero"></section>
+  </div>
+
+  
+
+  
+  <!-- Empty section before cards container -->
+  
+  
+  <div class="cards-container3" >
+    <div class="card-wrapper3">
+      <div class="card3">
+		  <h2>I purchased this duck water gun during water run event held at UITM Lendu</h2>
+        <p>One of the best day at Lendu</p> 
+      </div>
+    </div>
+    <div class="card-wrapper3">
+      <div class="card3">
+        	<img src="gun/gun3.jpg">	 
+      </div>
+    </div>
+    <div class="card-wrapper3">
+      <div class="card3">
+        <img src="gun/gun2.jpg">
+      </div>
+    </div>
+    <div class="card-wrapper3">
+      <div class="card3">
+        <img src="gun/gun1.jpg">
+      </div>
+    </div>
+		</div>
+		</main>
+		
+		
+		
+		
+		
+		
+ 
+  
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+    const wrappers = document.querySelectorAll('.card-wrapper3');
+    
+    wrappers.forEach((wrapper, index) => {
+      const card = wrapper.querySelector('.card3');
+      
+      // For the last card, allow normal scroll without pinning.
+      if (index === wrappers.length - 1) {
+        gsap.set(card, { opacity: 1, scale: 1 });
+      } else {
+        gsap.timeline({
+          scrollTrigger: {
+            trigger: wrapper,
+            start: "top top",
+            end: "bottom top",
+            scrub: true,
+            pin: true,
+            pinSpacing: false,
+          }
+        })
+        .set(card, { opacity: 1, scale: 1 })
+        .to(card, { opacity: 0, scale: 0.6, ease: "none" }, 0.01);
+      }
+    });
+  </script>
+
+
+</body>
+</html>
+

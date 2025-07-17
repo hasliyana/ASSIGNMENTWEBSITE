@@ -1,0 +1,319 @@
+@charset "utf-8";
+/* CSS Document */
+body, main {margin:0;
+background-color: #f7b700;}
+  
+	  #mySidenav a {
+  position:fixed; /* Position them relative to the browser window */
+  left: -90px; /* Position them outside of the screen */
+  transition: 0.3s; /* Add transition on hover */
+  padding: 15px; /* 15px padding */
+  width: 120px; /* Set a specific width */
+  text-decoration: none; /* Remove underline */
+  font-size: 20px; /* Increase font size */
+  color: white; /* White text color */
+  border-radius: 0 50px 50px 0;
+	 z-index: 1000;/* Rounded corners on the top right and bottom right side */
+}
+
+
+	  #mySidenav a:hover {
+  left: 0; /* On mouse-over, make the elements appear as they should */
+}
+
+
+#about {
+  top: 20px;
+  background-color: black;
+	  text-align: center;
+}
+		
+#blog {
+  top: 80px;
+  background-color: #15608b; /* Blue */
+	  text-align: center;
+}
+
+#projects {
+  top: 140px;
+  background-color: #549abe; /* Red */
+}
+
+#contact {
+  top: 200px;
+  background-color: #c1e8ff /* Light Black */
+}
+
+
+#fifth {
+  top: 260px;
+	background-color: #081a2d }
+#intro
+{width: auto;
+height:700px;
+margin-left: 280px;
+margin-top: 120px;
+
+}
+
+
+ 
+	  .content {
+  overflow-x: hidden;
+	width: 100%;
+  height: 100vh;
+}
+
+.content .section {
+  width: 100%;
+  height: 100vh;
+}
+
+.content .section.hero {
+  background-image: url("image/gun (2).png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+	width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+
+    /* Basic Reset */
+ 
+    /* Empty sections with grey background */
+  
+    
+    /* Container for stacking card wrappers vertically */
+    .cards-container3 { background-colour: #f7b700;
+      /* Wrappers stack naturally */
+    }
+    
+    /* Each card wrapper has 15vh top padding */
+    .card-wrapper3 {
+      height: 70vh;
+      padding-top: 15vh;
+      position: relative;
+      width: 50vw;
+      margin: auto;
+		background-colour: #f7b700;
+    }
+    
+    /* Last card wrapper gets extra bottom padding and increased height */
+    .card-wrapper3:last-of-type {
+      height: 85vh; /* 70vh + 15vh extra to account for bottom padding */
+      padding-bottom: 15vh;
+		background-colour: #D9AE2F;
+    }
+    
+    /* The card fills the wrapper's width and remaining height in normal wrappers */
+    .card3 {
+      width: 100%;
+      height: calc(70vh - 15vh); /* 55vh */
+      margin: 0 auto;
+      background-colour: #ffffff;
+      border-radius: 10px;
+      padding: 50px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+		
+    }
+
+
+.card3 img {width:750px; height:400px; border-radius: 10px;}
+    /* In the last wrapper, adjust card height to account for extra bottom padding */
+    .card-wrapper3:last-of-type .card {
+      height: calc(85vh - 30vh); /* 85 - (15+15) = 55vh */
+		background-colour: #ffffff;
+    }
+  
+.card3 h2
+{font-family: arial; font-size: 50px; text-align: center}
+.card3  p 
+{font-family: arial;font-size: 35px;text-align: center;color:white}
+
+.card-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+		height: 300px;
+			background-colour: #f7b700;
+        }
+
+        .card {
+            width: 150px;
+            height: 200px;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: none;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            overflow: hidden;
+			margin-top:20px;
+			background-colour: #ffffff;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: radial-gradient(circle, #9bcbe5 45%, transparent 100%);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.4s ease;
+            z-index: 1;
+        }
+
+        .card:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(46, 204, 113, 0.2);
+            border-color: rgba(46, 204, 113, 0.3);
+            background: rgba(46, 204, 113, 0.1);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .card-icon {
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(45deg, #ff6b6b, #feca57);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: white;
+            font-weight: bold;
+        }
+
+        .card-title {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 12px;
+            font-weight: 600;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            flex: 1;
+            transition: color 0.3s ease;
+        }
+
+        .card:hover .card-title {
+            color: white;
+        }
+
+        .card-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .card-number {
+            font-size: 24px;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 5px;
+            transition: color 0.3s ease;
+        }
+
+        .card:hover .card-number {
+            color: white;
+        }
+
+        .card-label {
+            font-size: 10px;
+            color: rgba(255, 255, 255, 0.6);
+            text-align: center;
+            transition: color 0.3s ease;
+        }
+
+        .card:hover .card-label {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .card-status {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #2ecc71;
+            animation: pulse 2s infinite;
+        }
+
+        .card-arrow {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover .card-arrow {
+            transform: translateX(3px);
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        /* Different card variants - now darker */
+        .card.variant-1 {
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .card.variant-2 {
+            background: rgba(0, 0, 0, 0.45);
+        }
+
+        .card.variant-3 {
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .card.variant-4 {
+            background: rgba(0, 0, 0, 0.35);
+        }
+
+
+
+
+
+

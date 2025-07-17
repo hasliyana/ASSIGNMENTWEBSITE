@@ -1,0 +1,157 @@
+
+@font-face {
+    font-family: 'Sucrose Bold Two';
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/sucrose.woff2') format('woff2');
+    }
+@font-face {
+    font-family: 'IM Fell French Canon Pro';
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/im-fell-french-canon-pro.woff2') format('woff2');
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+header { 
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/mountain-range.jpg) no-repeat;
+  padding-top: 61.93333333%;
+  background-size: cover;
+  font-family: 'Sucrose Bold Two';
+}
+header img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45.8%;
+}
+header h1 { 
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  font-size: 12vw;
+  line-height: .8;
+  margin-top: 0;
+  text-align: center;
+}
+header h1 span {
+  display: block;
+  font-size: 8.75vw;
+}
+main { 
+  background: #4d86a3;
+  position: relative;
+  font-family: 'Sucrose Bold Two';
+  font-size: 1.4rem;
+  padding-top: 100px;
+  line-height: 1.6;
+}
+@media all and (max-width: 400px) {
+  main { padding: 2rem; }
+}
+
+/* Blue Section (scroll down to see) */
+.blue-section {
+  background-color: #4d86a3;
+ padding-bottom: 380px;
+	padding-top: 380px;
+	position: relative;
+}
+
+.blue-content {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+ 
+}
+
+.icon-box {
+  width: 360px;
+  height: 360px;
+  background-color: #a6d1ea;
+  border-radius: 10px;
+}
+
+
+/* Collection Section */
+.collection {
+  background-color: #fffadd;
+	height:1200px ;
+  padding: 200px 20px 200px;
+  text-align: center;
+  font-weight: bold;
+	  border-top-left-radius: 100% 100px;
+  border-top-right-radius: 100% 100px;
+	position: relative;
+}
+
+.collection-text {
+	font-size: 9rem;
+  font-weight: 600;
+  margin: 0;
+  transition: font-size 0.7s ease;
+  color: black;
+
+}
+
+
+.collection-text.zoom-out {
+  opacity: 1;
+  transform: translateY(0) scale(0.6);
+
+}
+
+.circle-group {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+	 animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to   { transform: translate(-50%, -50%) rotate(360deg); }
+}
+.circle {
+  width: 40px;
+  height: 40px;
+  background: #ccc;
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0;
+  transform: scale(0.2);
+}
+
+.c1 { transform: rotate(0deg) translate(120px) rotate(0deg); }
+.c2 { transform: rotate(72deg) translate(120px) rotate(-72deg); }
+.c3 { transform: rotate(144deg) translate(120px) rotate(-144deg); }
+.c4 { transform: rotate(216deg) translate(120px) rotate(-216deg); }
+.c5 { transform: rotate(288deg) translate(120px) rotate(-288deg); }
+
+.circle.float-in {
+ opacity: 1;
+  animation: floatIn 1s ease-out forwards;
+}
+
+@keyframes floatIn {
+  0% { opacity: 0; transform: scale(0.2); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+
+.footer {
+  background-color: #4d86a3;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer-dot {
+  width: 10px;
+  height: 10px;
+  background-color: #fffadd;
+  border-radius: 50%;
+}
