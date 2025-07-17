@@ -81,7 +81,7 @@ margin-top:-600px;
 }
 
 .content .section.hero {
-  background-image: url("image/bricks.png");
+  background-image: url("bricks.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -191,16 +191,16 @@ input:checked + label .description {
 }
 
 .card[for="c1"] {
-  background-image: url("dd/dd2.png");
+  background-image: url("dd2.png");
 }
 .card[for="c2"] {
-  background-image: url("dd/dd1.jpg");
+  background-image: url("dd1.jpg");
 }
 .card[for="c3"] {
-  background-image: url("dd/dd2.png");
+  background-image: url("dd2.png");
 }
 .card[for="c4"] {
-  background-image: url("dd/dd1.jpg");
+  background-image: url("dd1.jpg");
 }
 
 
