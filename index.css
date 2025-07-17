@@ -41,7 +41,7 @@ body {
 }
 
 .content .section.hero {
-  background-image: url("image/main.png");
+  background-image: url("main.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
